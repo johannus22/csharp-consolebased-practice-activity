@@ -1,6 +1,6 @@
 # A Console Based Practice for C# Learners
 
-This console based app is made I am learning **C#** through [w3schools](w3schools.com/cs)
+This console based app is made I am learning **C#** through [w3schools](https://w3schools.com/cs)
 
 ## Setting up if you are using **VS CODE**
 
@@ -17,4 +17,4 @@ This console based app is made I am learning **C#** through [w3schools](w3school
 - Comments are provided.
 
 ### That's all. Show love by starring my repository 😊
-Tailored with ❤️ by [Johannus](github.com/johannus22)
+Tailored with ❤️ by [Johannus](https://github.com/johannus22)
