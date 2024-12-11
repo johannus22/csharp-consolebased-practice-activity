@@ -28,13 +28,39 @@ PassingParameter("John");
 Spacer();
 PassingMultipleParameters("John", "Doe", 29);
 Spacer();
-MultiplyByThirteen(13);
+MultiplyByThirteen(7642);
+Spacer("Object Oriented Approach");
+Animal animal = new Animal{ Specie = "Kangaroo"};
+animal.PrintSpecieName();
+animal.Speak();
+Spacer();
+Animal dog = new Dog();
+dog.Speak();
+Spacer();
+BankAccount account = new BankAccount();
+account.Deposit(1000);
+account.DisplayBalance();
 
 
 
 
-/******************************************************************************/
-// Methods starts here :)) 
+/******************************************************************************
+DISREGARD THIS METHOD, PROCEED WITH INDICATED BELOW
+******************************************************************************/
+static void Spacer(string? Identifier = null){
+    /*
+        Yes, I made a method just to display a spacer
+    */
+    if(!string.IsNullOrWhiteSpace(Identifier)){
+        Console.WriteLine($"==============={Identifier}=============="); 
+    }else{
+        Console.WriteLine("=========================================="); 
+    }
+}
+/********************************************************************************/
+
+
+// Tutorial Methods begins here :)) 
 static void MultiDimensionalArray(){
     // This method traverses the numbers from a two domensional array
         int?[,] numbers = { {1, 4, 2}, {3, 6, 8} };
@@ -46,14 +72,6 @@ static void MultiDimensionalArray(){
             Console.WriteLine(numbers[i, j]); 
             } 
         }
-}
-
-
-static void Spacer(){
-    /*
-        Yes, I made a method just to display a spacer
-    */
-    Console.WriteLine("=============================");
 }
 
 
@@ -103,9 +121,64 @@ static void PassingMultipleParameters(string firstname, string lastname, int age
     that doesn't return any value.
     The methods below returns a value so the word "void" is ommited or else it will return an error
 */
+
 static double MultiplyByThirteen(double number){
     // returns the number multiplied by 13
     return number * 13;
 }
 
+/*
+    The Codes below is about Object Oriented C# for a more advanced beginners
+    If you are an advanced beginner who already know some OOPs and is tired of Animal as an example,
+    then I don't care, heres class ANIMAL :P
+*/
 
+//Defining classes and creating objects with the use of getter and setter
+class Animal{
+    public string? Specie {get; set;}
+
+    public void PrintSpecieName(){
+        Console.WriteLine($"Specie: {Specie}");
+    }
+    public virtual void Speak()
+    {
+        Console.WriteLine("Animal is so noisy!!");
+    }
+}
+
+/*
+using polymorphism and method override
+lol they use colon instead of "extends" keyword, im used to that on PHP and Java
+
+*/
+class Dog : Animal
+{
+    public override void Speak()
+    {
+        //pretend the dog is a Filipino
+        Console.WriteLine("aw aw aw aw aw");
+    }
+}
+
+//using encapsulation
+class BankAccount{
+    private decimal balance;
+
+    public decimal Balance
+    {
+        get { return balance; }
+        set{
+            if (value >= 0)
+                balance = value;
+        }
+    }
+
+    public void Deposit(decimal amount){
+        if (amount > 0)
+            balance += amount;
+    }
+
+    public void DisplayBalance(){
+        Console.WriteLine($"Balance: {balance:C}");
+    }
+}

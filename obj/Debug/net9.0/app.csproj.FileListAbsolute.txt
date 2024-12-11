@@ -12,3 +12,4 @@ C:\Users\Raf\Documents\DEV\c#\app\obj\Debug\net9.0\refint\app.dll
 C:\Users\Raf\Documents\DEV\c#\app\obj\Debug\net9.0\app.pdb
 C:\Users\Raf\Documents\DEV\c#\app\obj\Debug\net9.0\app.genruntimeconfig.cache
 C:\Users\Raf\Documents\DEV\c#\app\obj\Debug\net9.0\ref\app.dll
+C:\Users\Raf\Documents\DEV\c#\app\obj\Debug\net9.0\app.sourcelink.json
